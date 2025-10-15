@@ -31,7 +31,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     setIsHovered(false);
     setOpen(false);
   };
-
+  
   return (
     <Sidebar className="z-50" collapsible="icon" {...props}>
       <SidebarHeader className="flex w-full justify-center border-b bg-sidebar-accent text-center dark:bg-sidebar">

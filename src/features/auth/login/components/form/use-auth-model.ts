@@ -24,7 +24,6 @@ export const useAuthModel = () => {
 
   const handleSubmitForm = async (values: AuthSchema) => {
     const response = await login(values);
-    console.log(values);
     if (response.status === 201 || response.status === 200) {
       navigate('/home');
       return toast.success('Login realizado com sucesso!');

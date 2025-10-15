@@ -9,7 +9,7 @@ export const data: RoutesPages = {
   Common: [
     {
       title: 'Home',
-      url: '',
+      url: '/home',
       icon: HomeIcon,
       isActive: true,
       inSidebar: true,
@@ -24,8 +24,6 @@ export const data: RoutesPages = {
       ],
     },
   ],
-  Administrador: [],
-  Almoxarifado: [],
   Login: [],
   Unauthorized: [
     {

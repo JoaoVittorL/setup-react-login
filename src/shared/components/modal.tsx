@@ -86,11 +86,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, config, loading, onClose }) => {
 
   return (
     <div
-      className="bg-black/50 fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm duration-200 animate-in fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm duration-200 animate-in fade-in"
       onClick={handleOverlayClick}
     >
       <div
-        className={`relative w-full ${sizeClasses[config.size || 'md']} max-h-[90vh] space-y-2 overflow-hidden rounded-2xl border bg-white-500 p-4 shadow-2xl duration-300 animate-in zoom-in-95 slide-in-from-bottom-8 dark:bg-sidebar`}
+        className={`relative w-full ${sizeClasses[config.size || 'md']} bg-white-500 max-h-[90vh] space-y-2 overflow-hidden rounded-2xl border p-4 shadow-2xl duration-300 animate-in zoom-in-95 slide-in-from-bottom-8 dark:bg-sidebar`}
       >
         {(config.title || config.showClose) && (
           <div className="flex items-center justify-between border-b">
@@ -101,7 +101,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, config, loading, onClose }) => {
                 </div>
               )}
               {config.title && (
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white-500">{config.title}</h2>
+                <h2 className="dark:text-white-500 text-xl font-semibold text-gray-900">{config.title}</h2>
               )}
             </div>
 

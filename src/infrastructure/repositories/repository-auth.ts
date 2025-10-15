@@ -11,7 +11,6 @@ export class Repository implements AuthRepository {
       method: 'post',
       data,
     });
-    console.log(response);
     return {
       access_token: response.data.access_token,
       status: response.status,

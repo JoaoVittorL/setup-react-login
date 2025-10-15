@@ -43,7 +43,7 @@ export function EmptyData({ title, description }: EmptyStateProps) {
     <AnimatePresence>
       <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="mt-4">
         <motion.div
-          className="bg-gray-10000 border-gray-500/30 relative flex flex-col items-center gap-6 overflow-hidden rounded-lg border from-gray-900 to-gray-800 p-6 dark:bg-gradient-to-b"
+          className="bg-gray-10000 relative flex flex-col items-center gap-6 overflow-hidden rounded-lg border border-gray-500/30 from-gray-900 to-gray-800 p-6 dark:bg-gradient-to-b"
           whileHover={{
             transition: { duration: 0.3 },
           }}
@@ -56,11 +56,11 @@ export function EmptyData({ title, description }: EmptyStateProps) {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Database className="text-gray-500 h-12 w-12" />
+            <Database className="h-12 w-12 text-gray-500" />
           </motion.div>
 
           <motion.div variants={contentVariants} className="relative z-10 space-y-2 text-center">
-            <h3 className="text-gray-500 text-xl font-bold">{title}</h3>
+            <h3 className="text-xl font-bold text-gray-500">{title}</h3>
             <p className="mx-auto dark:text-yellow-100/60">{description}</p>
           </motion.div>
 

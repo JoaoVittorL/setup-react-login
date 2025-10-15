@@ -18,7 +18,7 @@ export interface RouteGroup {
   items: RouteItem[];
 }
 
-export type UserRole = 'Common' | 'Administrador' | 'Almoxarifado' | 'Unauthorized';
+export type UserRole = 'Common' | 'Unauthorized';
 
 export type RoutesPages = Record<UserRole | 'Login', RouteGroup[]>;
 

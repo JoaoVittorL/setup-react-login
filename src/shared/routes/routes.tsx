@@ -35,7 +35,6 @@ export const RoutesComponent = () => {
 
     const userRole = user?.role as keyof typeof data;
     const userRouteGroups = [...(data.Common || []), ...(data[userRole] || data.Unauthorized)];
-    console.log(userRouteGroups);
 
     if (!userRouteGroups || userRouteGroups.length === 0) {
       return createBrowserRouter([
