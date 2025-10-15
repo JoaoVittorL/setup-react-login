@@ -28,14 +28,14 @@ export function Pagination({ pageIndex, lastPage, totalCount, onPageChange }: Pa
   return (
     <div className="mt-4 flex w-full items-center justify-between" data-testid="pagination">
       <div>
-        <span className="text-sm font-medium dark:text-white-500">{totalCount} resultados encontrados </span>
+        <span className="text-sm font-medium dark:text-white">{totalCount} resultados encontrados </span>
       </div>
       {lastPage > 1 && (
         <div className="flex items-center gap-2">
           <Button
             onClick={() => handlePaginate(1)}
             variant="outline"
-            className={`h-8 w-8 rounded-full p-0 ${pageIndex === 1 ? 'bg-green-500 text-white-500' : 'bg-green-500 text-white-500'}`}
+            className={`h-8 w-8 rounded-full p-0 ${pageIndex === 1 ? 'bg-green-500 text-white' : 'bg-green-500 text-white'}`}
             aria-label="back-to-first-page"
             title="Voltar para primeira página"
             disabled={pageIndex === 1}
@@ -57,7 +57,7 @@ export function Pagination({ pageIndex, lastPage, totalCount, onPageChange }: Pa
             <span className="sr-only">Página anterior</span>
           </Button>
 
-          <span className="text-sm font-medium dark:text-white-500">
+          <span className="text-sm font-medium dark:text-white">
             {pageIndex} de {lastPage}
           </span>
 
@@ -76,7 +76,7 @@ export function Pagination({ pageIndex, lastPage, totalCount, onPageChange }: Pa
           <Button
             onClick={() => handlePaginate(lastPage)}
             variant="outline"
-            className={`h-8 w-8 rounded-full p-0 ${pageIndex === lastPage ? 'bg-green-500 text-white-500' : 'bg-green-500 text-white-500'}`}
+            className={`h-8 w-8 rounded-full p-0 ${pageIndex === lastPage ? 'bg-green-500 text-white' : 'bg-green-500 text-white'}`}
             aria-label="go-to-last-page"
             title="Ir para ultima página"
             disabled={pageIndex === lastPage}

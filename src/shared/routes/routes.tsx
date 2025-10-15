@@ -33,7 +33,7 @@ export const RoutesComponent = () => {
       ]);
     }
 
-    const userRole = user?.role as keyof typeof data;
+    const userRole = user?.type as keyof typeof data;
     const userRouteGroups = [...(data.Common || []), ...(data[userRole] || data.Unauthorized)];
 
     if (!userRouteGroups || userRouteGroups.length === 0) {

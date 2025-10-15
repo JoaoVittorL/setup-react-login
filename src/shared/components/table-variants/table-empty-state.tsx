@@ -47,7 +47,7 @@ export function TableEmptyState({ colSpan, message, title }: TableEmptyStateProp
           <AnimatePresence>
             <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
               <motion.div
-                className="relative flex flex-col items-center gap-6 overflow-hidden rounded-b-md bg-white-500 p-6 dark:bg-muted/40"
+                className="relative flex flex-col items-center gap-6 overflow-hidden rounded-b-md bg-white p-6 dark:bg-muted/40"
                 whileHover={{
                   transition: { duration: 0.3 },
                 }}

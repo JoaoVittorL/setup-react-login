@@ -8,7 +8,7 @@ interface TableLoadingProps {
 
 export function TableLoading({ colSpan, message }: TableLoadingProps) {
   return (
-    <TableBody className="h-32 bg-white-500 dark:bg-muted/40">
+    <TableBody className="h-32 bg-white dark:bg-muted/40">
       <TableRow>
         <TableCell colSpan={colSpan} className="p-10 text-center">
           <motion.div

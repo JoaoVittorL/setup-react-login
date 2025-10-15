@@ -14,8 +14,9 @@ const PrivateRoute = ({ element, requiredRole }: PrivateRouteProps) => {
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: location.pathname }} replace />;
   }
-
-  if (requiredRole && user?.role !== requiredRole) {
+  console.log('UserType', user?.type);
+  console.log('Required Role', requiredRole);
+  if (requiredRole && user?.type !== requiredRole) {
     return <Navigate to="/unauthorized" replace />;
   }
 

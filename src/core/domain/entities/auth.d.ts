@@ -8,7 +8,7 @@ export interface User {
   firstLogin: boolean;
   iat: number;
   name: string;
-  role: string;
+  type: string;
   sub: string;
 }
 export interface AuthState {

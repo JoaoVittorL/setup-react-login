@@ -12,7 +12,7 @@ export function MobileNav() {
   const { user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
-  const role = user?.role ?? 'Unauthorized';
+  const role = user?.type ?? 'Unauthorized';
 
   return (
     <div className="relative">

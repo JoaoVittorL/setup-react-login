@@ -13,7 +13,7 @@ const getTabItemStyles = (isActive: boolean) => ({
   button: clsx(
     'relative z-10 px-6 py-2 text-sm font-medium transition-colors flex justify-center items-center gap-2',
     '',
-    isActive ? 'text-white-500' : 'dark:text-white-500 text-gray-600',
+    isActive ? 'text-white' : 'dark:text-white text-gray-600',
   ),
   motionDiv: 'absolute inset-0 bg-green-600',
 });

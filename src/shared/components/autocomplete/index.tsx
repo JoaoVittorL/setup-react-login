@@ -110,7 +110,7 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
       return parts.map((part, index) => {
         const isMatch = part.toLowerCase() === query.toLowerCase();
         return (
-          <span key={index} className={isMatch ? 'rounded bg-gray-700 px-1 text-white-500' : ''}>
+          <span key={index} className={isMatch ? 'rounded bg-gray-700 px-1 text-white' : ''}>
             {part}
           </span>
         );
@@ -166,7 +166,7 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
         {isOpen && (
           <div
             ref={dropdownRef}
-            className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg border bg-white-500 shadow-lg dark:border-gray-500 dark:bg-gray-500"
+            className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg border bg-white shadow-lg dark:border-gray-500 dark:bg-gray-500"
           >
             {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => (
@@ -175,8 +175,8 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
                   onClick={() => handleSelect(item)}
                   className={`cursor-pointer border-b px-4 py-3 last:border-b-0 dark:border-gray-400 ${
                     highlightedIndex === index
-                      ? 'bg-gray-500 text-white-500'
-                      : 'hover:bg-gray-500 hover:text-white-500 dark:text-white-500'
+                      ? 'bg-gray-500 text-white'
+                      : 'hover:bg-gray-500 hover:text-white dark:text-white'
                   }`}
                 >
                   <div className="text-sm font-medium">{highlightMatch(item.label, inputValue)}</div>
@@ -187,8 +187,8 @@ export const Autocomplete = forwardRef<HTMLInputElement, AutocompleteProps>(
               ))
             ) : inputValue.trim() ? (
               <div className="px-4 py-6 text-center text-gray-500">
-                <Search size={20} className="mx-auto mb-2 opacity-50 dark:text-white-500" />
-                <div className="text-sm dark:text-white-500">Nenhum resultado encontrado</div>
+                <Search size={20} className="mx-auto mb-2 opacity-50 dark:text-white" />
+                <div className="text-sm dark:text-white">Nenhum resultado encontrado</div>
               </div>
             ) : null}
           </div>

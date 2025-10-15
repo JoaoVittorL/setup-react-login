@@ -9,7 +9,25 @@ export const data: RoutesPages = {
   Common: [
     {
       title: 'Home',
-      url: '/home',
+      url: '',
+      icon: HomeIcon,
+      isActive: true,
+      inSidebar: true,
+      layout: <AppLayout />,
+      items: [
+        {
+          icon: HomeIcon,
+          title: 'Home',
+          url: '/home',
+          element: <HomePage />,
+        },
+      ],
+    },
+  ],
+  Administrador: [
+    {
+      title: 'Home',
+      url: '',
       icon: HomeIcon,
       isActive: true,
       inSidebar: true,

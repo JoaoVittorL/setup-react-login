@@ -30,7 +30,6 @@ interface NavMainProps {
 
 export function NavMain({ items, onNavigate }: NavMainProps) {
   const location = useLocation();
-
   return (
     <SidebarGroup>
       <SidebarMenu>
@@ -51,12 +50,12 @@ export function NavMain({ items, onNavigate }: NavMainProps) {
                     tooltip={item.title}
                     className={
                       isActive
-                        ? 'bg-green-600 text-white-500 transition-colors duration-200 ease-in-out hover:bg-green-700 hover:text-white-500'
-                        : 'text-white-500 transition-colors duration-200 ease-in-out hover:bg-gray-50 hover:text-green-500 dark:hover:bg-gray-500'
+                        ? 'bg-gray-600 text-white transition-colors duration-200 ease-in-out hover:bg-gray-700 hover:text-white'
+                        : 'text-white transition-colors duration-200 ease-in-out hover:bg-gray-50 hover:text-gray-500 dark:hover:bg-gray-500'
                     }
                   >
-                    {item.icon && <item.icon className={isActive ? 'text-white-500' : 'text-gray-500'} />}
-                    <span className={`text-sm ${isActive ? 'text-white-500' : 'text-gray-500 dark:text-white-500'}`}>
+                    {item.icon && <item.icon className={isActive ? 'text-white' : 'text-white'} />}
+                    <span className={`text-sm ${isActive ? 'text-white' : 'text-gray-500 dark:text-white'}`}>
                       {item.title}
                     </span>
                   </SidebarMenuButton>
@@ -75,16 +74,14 @@ export function NavMain({ items, onNavigate }: NavMainProps) {
                 <CollapsibleTrigger asChild>
                   <SidebarMenuButton
                     tooltip={item.title}
-                    className={isSubItemActive ? 'bg-gray-600 dark:text-white-500' : 'dark:text-white-500'}
+                    className={isSubItemActive ? 'bg-gray-600 dark:text-white' : 'dark:text-white'}
                   >
-                    {item.icon && <item.icon className={isSubItemActive ? 'text-white-500' : 'text-gray-500'} />}
-                    <span
-                      className={`text-sm ${isSubItemActive ? 'text-white-500' : 'text-gray-700 dark:text-white-500'}`}
-                    >
+                    {item.icon && <item.icon className={isSubItemActive ? 'text-white' : 'text-gray-500'} />}
+                    <span className={`text-sm ${isSubItemActive ? 'text-white' : 'text-gray-700 dark:text-white'}`}>
                       {item.title}
                     </span>
                     <ChevronRightIcon
-                      className={`ml-auto font-bold text-gray-500 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90 dark:text-white-500 ${isSubItemActive ? 'text-white-500 group-data-[state=open]/collapsible:text-white-500' : 'dark:group-data-[state=open]/collapsible:text-white-500'}`}
+                      className={`ml-auto font-bold text-gray-500 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90 dark:text-white ${isSubItemActive ? 'text-white group-data-[state=open]/collapsible:text-white' : 'dark:group-data-[state=open]/collapsible:text-white'}`}
                     />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
@@ -98,10 +95,10 @@ export function NavMain({ items, onNavigate }: NavMainProps) {
                           <Link to={item.url + subItem.url} onClick={onNavigate}>
                             <SidebarMenuSubButton
                               asChild
-                              className={isSubItemActive ? 'bg-gray-600 dark:hover:text-white-500' : ''}
+                              className={isSubItemActive ? 'bg-gray-600 dark:hover:text-white' : ''}
                             >
-                              <div className={isSubItemActive ? 'bg-gray-600 text-white-500 hover:text-white-500' : ''}>
-                                {subItem.icon && <subItem.icon className={isSubItemActive ? '!text-white-500' : ''} />}
+                              <div className={isSubItemActive ? 'bg-gray-600 text-white hover:text-white' : ''}>
+                                {subItem.icon && <subItem.icon className={isSubItemActive ? '!text-white' : ''} />}
                                 <span className="text-sm">{subItem.title}</span>
                               </div>
                             </SidebarMenuSubButton>

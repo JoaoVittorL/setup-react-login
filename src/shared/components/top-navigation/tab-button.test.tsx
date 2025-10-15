@@ -27,7 +27,7 @@ describe('TabButton', () => {
     );
 
     const button = screen.getByRole('button', { name: /Minha Aba/i });
-    expect(button).toHaveClass('text-white-500');
+    expect(button).toHaveClass('text-white');
   });
 
   it('should call onClick handler when clicked', () => {

@@ -13,7 +13,7 @@ export function AppLayout() {
         <div className="mx-auto w-full">
           <AppHeader tabTitle={''} />
           <main className="relative flex h-full w-full flex-1 flex-col gap-4 overflow-auto p-2 pt-14" id="main-content">
-            <div className="relative mx-auto w-full flex-1 rounded-md p-2 shadow-lg sm:bg-sidebar-accent sm:p-4 sm:dark:bg-sidebar md:min-h-min">
+            <div className="relative mx-auto w-full flex-1 p-2 shadow-lg sm:bg-sidebar-accent sm:p-4 sm:dark:bg-sidebar md:min-h-min">
               <Outlet />
             </div>
           </main>
