@@ -31,7 +31,7 @@ export const PasswordInput = ({
   };
 
   return (
-    <div className="space-y-2 w-full">
+    <div className="w-full space-y-2">
       <Label className="text-sm font-medium text-gray-700 dark:text-gray-200">{label}</Label>
       <div className="relative">
         <Input
